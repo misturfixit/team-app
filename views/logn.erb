@@ -1,42 +1,35 @@
 <%=mssg%>
-
 <script>
 	function practice(){
-	window.location.href	= "/names"
+		window.location.href	= "/names"
 }
-function culr(a){
-	a.style.color = "purple"
+	function culr(a){
+		a.style.color = "purple"
 }
-function colr(b){
-	b.style.color = "hsla(120, 70%, 40%, .53)"
+	function colr(b){
+		b.style.color = "hsla(120, 70%, 40%, .53)"
+}
+	function kulr(c){
+		c.style.color = "orange"
+}
+	function qulr(d){
+		d.style.color = "firebrick"
 }
 </script>
 
-
-
-
 <html>
-<head>
-	<title></title>
-</head>
-
-
-<h1> User Login </h1>
-
-<body>
-
-<form method="post" action="login">
-	<h4>	UserName </h4><br>
-	<input type="text" name="uname"><br>
-	<h4>  Password </h4>
-	<input type="password" name="pword"><br>
-			Login?<br>
-	<input type="submit" value="Enter"><br>
-</form>
-	<p class="color" onmouseover ="culr(this)" onmouseout="colr(this)">~~Cause ya don't gotta hafta needta~~</p>
-	<button class="butt" onclick="practice()">~~Skip?~~</button>
-
-
-
-</body>
+				<h1> User Login </h1>
+	<body>
+		<form method="post" action="login">
+				<h3>	UserName </h3><br>
+			<input type="text" name="uname"><br>
+				<h3>  Password </h3><br>
+			<input type="password" name="pword"><br>
+				Login?
+			<input type="submit" value="Enter"><br>
+		</form>
+			
+			<p class="color" onmouseover ="culr(this)" onmouseout="colr(this)">~~Cause ya don't gotta hafta needta~~</p>
+		<button class="butt" onclick="practice()" onmouseover ="kulr(this)" onmouseout="qulr(this)">~~Skip?~~</button>
+	</body>
 </html>
