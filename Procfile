@@ -1,1 +1,1 @@
-web: bundle exec ruby coin_app.rb
+web: bundle exec ruby team-app.rb
