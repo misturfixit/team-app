@@ -1,12 +1,35 @@
 <%=first%> <%=last%>
-<head>
-<h2>  Team Generator	</h2>
-<h4>  People to team up?	</h4>
-</head>
+<script>
+	function gittem(){
+		var amnt = document.getElementById("pears").value;
+		for (i = 0; i < amnt; i++){
+		var names = document.createElement("input");
+			names.type = "text";
+			names.required = true;
+			names.name = "names" + i
+			names.placeholder = "Puttem Here"
+			dispart.appendChild(names);
+			dispart.appendChild(document.createElement("br"))
+			}	
+}
+
+
+</script>
+
+	
+
+
+
+
+	<head>
+			<h2>  Team Generator	</h2>
+	</head>
+
 <html>
-	<form method="post" action="input">
-		<input type="text" name="">
-		
+			<h4> Number of People to team up?	</h4>
+	<form method="post" action="nput" id="dispart">
+		<input type="number" id="pears" oninput="gittem()">
+		<input type="submit" value="butt">
 	</form>
 	
 

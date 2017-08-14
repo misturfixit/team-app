@@ -1,12 +1,13 @@
-names = %w[Schtewi Biljakk Garrkk Pmizzle Mattt LuUK KeeFr Yusseppi]
+# # names = 
+# # %w[Schtewi Biljakk Garrkk Pmizzle Mattt LuUK KeeFr Yusseppi]
 
-def tea_maker(names)
-	names_shuffled = names.shuffle
+# def tea_maker(names)
+# 	names_shuffled = names.shuffle
 
-	names_shuffled
-end
+# 	names_shuffled
+# end
 
-def results(names_shuffled)
+def res(names_shuffled)
 	answer =[]
 	pair =[]
 
@@ -27,4 +28,4 @@ def results(names_shuffled)
 		end	
 answer
 end
-results(tea_maker(names))
+# results(tea_maker(names))
