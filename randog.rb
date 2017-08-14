@@ -1,28 +1,28 @@
 # # names = 
 # # %w[Schtewi Biljakk Garrkk Pmizzle Mattt LuUK KeeFr Yusseppi]
 
-# def tea_maker(names)
-# 	names_shuffled = names.shuffle
+def tea_maker(names)
+	names = names.shuffle
 
-# 	names_shuffled
-# end
+	names
+end
 
-def res(names_shuffled)
+def res(names)
 	answer =[]
 	pair =[]
 
-	while names_shuffled.length >= 2	
-		last = names_shuffled.last
-		names_shuffled.delete(last)
+	while names.length >= 2	
+		last = names.last
+		names.delete(last)
 
-		next1 = names_shuffled.last
-		names_shuffled.delete(next1)
+		next1 = names.last
+		names.delete(next1)
 	
 		team = [last, next1]
 		answer << team
 
-			if names_shuffled.length == 1
-				oddguy = names_shuffled.last
+			if names.length == 1
+				oddguy = names.last
 				answer[0] << oddguy
 			end	
 		end	

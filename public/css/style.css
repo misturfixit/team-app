@@ -11,5 +11,13 @@ p{
 	font-size: 1.11vw; 
 }
 form{
-	margin-left:37.55%;	
+	margin-left:04.55%;	
+}
+body{
+  
+  text-align: center;  
+  background-image: url(/photos/mrsnappy.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
