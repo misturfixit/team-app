@@ -1,7 +1,7 @@
 <%=first%> <%=last%>
 <script>
 function gittem(){
-	document.getElementById("elm").innerHTML = "PuTDeMNaMeSIN";
+	document.getElementById("elm").innerHTML = "PuTDeMNaMeSIN" + "<br>";
 		var amnt = document.getElementById("pears").value;
 			for (i = 1; i <= amnt; i++){
 				var names = document.createElement("input");
@@ -9,15 +9,12 @@ function gittem(){
 					names.id = "names";
 					names.required = true;
 					names.name = "names" + i;
-					names.placeholder = "Puttem Here";
+					names.placeholder = "Put Names Here";
 					document.getElementById("elm").appendChild(names).value;
+				
 					}	
 }
-
-
 </script>
-
-	
 
 
 
@@ -30,13 +27,12 @@ function gittem(){
 			<h4> Number of People to team up?	</h4>
 	<form method="post" action="nput" id="dispart">
 		<input type="number" id="pears" oninput="gittem()">
-		<p id="elm"></p>
-		<br>
+		
+		<div id="elm"></div>
+		<!-- <br> -->
 		<input type="submit" value="Butt">
 	</form>
 	
 
-
-
-</body>				misturfixit
+</body>				
 </html>
