@@ -1,0 +1,24 @@
+<html>
+	<script>
+		function chiggychek(c){	
+			for (i=0, i < c.length, i++){
+				var ck=document.createElement("checkbox");
+				ck.type="checkbox";
+				ck.name="drop[]";
+				ck.value="c";
+				oof.appendChild(ck);
+			}
+		}
+	</script>
+
+
+	<body onload="chiggychek(c)">
+		<form method="post" action="/p_check">
+			<input type="hidden" name="c" value="<%=c%>">
+				<div id="oof">
+				<%=c%>
+				</div>
+			<input type="submit" value="CZECH">	
+		</form>
+	</body>
+</html>

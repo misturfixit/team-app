@@ -1,16 +1,11 @@
-# # names = 
-# # %w[Schtewi Biljakk Garrkk Pmizzle Mattt LuUK KeeFr Yusseppi]
 
 def tea_maker(names)
 	names = names.shuffle
-
 	names
 end
-
 def res(names)
 	answer =[]
 	pair =[]
-
 	while names.length >= 2	
 		last = names.last
 		names.delete(last)
@@ -20,7 +15,6 @@ def res(names)
 	
 		team = [last, next1]
 		answer << team
-
 			if names.length == 1
 				oddguy = names.last
 				answer[0] << oddguy

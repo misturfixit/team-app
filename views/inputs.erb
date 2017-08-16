@@ -11,12 +11,22 @@ function gittem(){
 					names.name = "names" + i;
 					names.placeholder = "Put Names Here";
 					document.getElementById("elm").appendChild(names).value;
-				
 					}	
+}					
+function less(){
+	var x = document.getElementById("elm");
+	x.removeChild(x.lastChild);
 }
+function more(){
+	var names = document.createElement("input");
+					names.type = "text";
+					names.id = "names";
+					names.required = true;
+					names.name = "names[]";
+					names.placeholder = "Put Names Here";
+					document.getElementById("elm").appendChild(names).value;
+} 	
 </script>
-
-
 
 <body>
 	<head>
@@ -27,12 +37,12 @@ function gittem(){
 			<h4> Number of People to team up?	</h4>
 	<form method="post" action="nput" id="dispart">
 		<input type="number" id="pears" oninput="gittem()">
-		
-		<div id="elm"></div>
-		<!-- <br> -->
+		<button type="button"  onclick="more()" value="+++"> more </button>
+		<button  type="button" onclick="less()" value="---"> less </button>
+			<div id="elm">
+			</div>
+		 <br> 
 		<input type="submit" value="Butt">
 	</form>
-	
-
 </body>				
 </html>

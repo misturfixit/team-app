@@ -25,12 +25,21 @@ get '/nput' do
 	erb :inputs, locals:{first: session[:first], last: session[:last]}
 end
 post '/nput' do
-	allavum = params.values
-	pears = tea_maker(allavum)
-	pairs = res(pears)
-	smoosh = smoosher(pairs) 
-	redirect '/zit?smoosh='+smoosh
+	names = params[names]
+	session[:c] = tea_maker(names)
+	# pears = tea_maker(allavum)
+	# pairs = res(pears)
+	# smoosh = smoosher(pairs) 
+	redirect '/chiggy?names='+names
 end	
+ get '/chiggy' do
+ 	 erb :check, locals:{c: session[:c]}
+end
+post '/p_check' do
+ 		drop = params[:drop]
+		smoosh = smoosh(drop)
+		redirect '/results?smoosh=' + smoosh
+end
 get '/zit' do
 	smoosh = params[:smoosh]
 	erb :results, locals:{first: session[:first], last: session[:last], smoosh: smoosh}

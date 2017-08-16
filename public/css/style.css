@@ -1,22 +1,39 @@
 .color{
 	color:hsla(120, 70%, 40%, .53);
 }
+.size{
+	font-size: 13rem;
+}
 .butt{
 	margin-left:52.33%;
+}
+h1{
+	background-image: url(/photos/twrk.png);
+	background-position: center;
+  background-repeat: repeat;
+  background-size: contain;
+	border:13px rgb(152,152,152);
+  border-style: groove;		
+}
+h2{
+
+}
+h4{
+font-size-adjust: 13%;
 }
 
 p{
 	margin-left:42.34%;
 	margin-right: 30.55%;
-	font-size: 1.11vw; 
+	font-size: 1.7vw; 
 }
 form{
 	margin-left:04.55%;	
 }
 body{
-  
+  color:#cc0044;
   text-align: center;  
-  background-image: url(/photos/mrsnappy.jpg);
+  background-image: url(/photos/teamss.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
