@@ -2,6 +2,8 @@ function less(){
 	var x = document.getElementById("elm");
 	x.removeChild(x.lastChild);
 }
+
+
 function gittem(){
 	document.getElementById("elm").innerHTML="PuTDeMNaMeSIN"+"<br>";
 	var amnt = document.getElementById("pears").value;
@@ -10,11 +12,12 @@ function gittem(){
 				names.type="text";
 				names.id="names";
 				names.required=true;
-				names.name="names[]" + i;
-				names.placeholder="Put Names Here";
+				names.name="names[]";
+				names.placeholder="Names Here";
 				document.getElementById("elm").appendChild(names).value;
 		}	
-}					
+}				
+
 function more(){
 	var names = document.createElement("input");
 		names.type="text";
@@ -24,9 +27,11 @@ function more(){
 		names.placeholder="Names Here";
 		document.getElementById("elm").appendChild(names).value;
 } 	
+
 function practice(){
 	window.location.href="/nput"
 }
+
 function culr(a){
 	a.style.color="purple"
 }
@@ -39,15 +44,17 @@ function kulr(c){
 function qulr(d){
 	d.style.color="firebrick"
 }
+
 function chiggychek(v){	
 	for (i=0; i < v.length; i++){
+		oof = document.getElementById("oof");
 		var ck=document.createElement("input");
 		ck.type="checkbox";
 		ck.name="drop[]";
 		ck.value=v[i];
-		var label=document.createTextNode(v(i));
+		var label=document.createTextNode(v[i]);
 		oof.appendChild(label);
 		oof.appendChild(ck);
-		oof.appendChild(document.createElement("br"));
+		//oof.appendChild(document.createElement("br"));
 	}
 }

@@ -1,12 +1,21 @@
 <html>
 		<script src="js/javs.js"></script>
+	<form method="post" action="p_check">
+		<%v.each do |pair|%>
+		<p><input type="checkbox" name="pickem[]" value="<%=pair%>"> <%=pair%></p>
 
-	<body onload="chiggychek(v)">
+<%end%>
+<input type="submit" value="CZECH">
+</form>
+</html>
+
+	<!-- <body onload="chiggychek(<%=v%>)">
 		<br><br><br><br><br><br><br>	
-			<form method="post" action="p_check">
-				<input type="hidden" name="v" value="<%=v%>">
+			
+				<input type="hidden" name= "<%=v%>" value="<%=v%>">
 					<div id="oof"></div>
-				<input type="submit" value="CZECH">	
+					
 			</form>
 	</body>
 </html>
+ -->
