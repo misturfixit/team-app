@@ -33,7 +33,7 @@ form{
 body{
   color:#cc0044;
   text-align: center;  
-  background-image: url(/photos/teamss.jpg);
+ /* background-image: url(/photos/team.jpg);*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

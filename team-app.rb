@@ -1,7 +1,5 @@
 require "sinatra"
-require_relative "randog.rb"
-require_relative "user.rb"
-require_relative "smoosh.rb"
+require_relative "rbstuff.rb"
 enable :sessions
 get '/' do 
 	mssg = params[:mssg] || ""	
@@ -19,28 +17,30 @@ end
 post '/names' do
 	session[:first] = params[:first]
 	session[:last] = params[:last]
-	redirect '/put?'
+	redirect '/nput'
 end
 get '/nput' do
-	erb :inputs, locals:{first: session[:first], last: session[:last]}
+	erb :inputs, locals:{first:session[:first],
+		last:session[:last]}
 end
 post '/nput' do
-	names = params[names]
-	session[:c] = tea_maker(names)
-	# pears = tea_maker(allavum)
-	# pairs = res(pears)
-	# smoosh = smoosher(pairs) 
-	redirect '/chiggy?names='+names
+  names = params.values
+	pears = tea_maker(names)
+  session[:c] = smoosh(pears)
+	redirect '/chiggy'
 end	
  get '/chiggy' do
- 	 erb :check, locals:{c: session[:c]}
+ 	v = strangy(session[:c])
+ 	erb :check, locals:{v:v}
 end
 post '/p_check' do
- 		drop = params[:drop]
-		smoosh = smoosh(drop)
-		redirect '/results?smoosh=' + smoosh
+	v = params[:v]
+	drop = params[:drop]
+	smoosh = smoosh(drop)
+	redirect '/zit?smoosh='+smoosh
 end
 get '/zit' do
 	smoosh = params[:smoosh]
-	erb :results, locals:{first: session[:first], last: session[:last], smoosh: smoosh}
+	erb :results, locals:{first:session[:first],
+		last:session[:last],smoosh:smoosh}
 end	

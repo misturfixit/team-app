@@ -1,24 +1,7 @@
 <%=mssg%>
-<script>
-	function practice(){
-		window.location.href = "/nput"
-}
-	function culr(a){
-		a.style.color = "purple"
-}
-	function colr(b){
-		b.style.color = "hsla(120, 70%, 40%, .53)"
-}
-	function kulr(c){
-		c.style.color = "orange"
-}
-	function qulr(d){
-		d.style.color = "firebrick"
-}
-</script>
-
+<script src=js/javs.js></script>
 <html>
-				<h2> User Login </h2>
+		<h2> User Login </h2>
 	<body>
 		<form method="post" action="login">
 				<h3>	UserName </h3><br>
@@ -29,7 +12,11 @@
 			<input type="submit" value="Enter"><br>
 		</form>
 			
-			<p class="color" onmouseover ="culr(this)" onmouseout="colr(this)">~~Cause ya don't gotta hafta needta do this~~</p>
-		<button class="butt" onclick="practice()" onmouseover ="kulr(this)" onmouseout="qulr(this)">~~Skip?~~</button>
+			<p class="color" onmouseover ="culr(this)" onmouseout="colr(this)">
+				~~Cause ya don't gotta hafta needta do this~~</p>
+			<button class="butt" onclick="practice()" onmouseover ="kulr(this)" 
+				onmouseout="qulr(this)">
+					~~Skip?~~
+			</button>
 	</body>
 </html>
