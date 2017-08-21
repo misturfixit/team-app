@@ -13,7 +13,7 @@ function gittem(){
 				names.id="names";
 				names.required=true;
 				names.name="names[]";
-				names.placeholder="Names Here";
+				names.placeholder="Name Here";
 				document.getElementById("elm").appendChild(names).value;
 		}	
 }				
@@ -24,7 +24,7 @@ function more(){
 		names.id="names";
 		names.required=true;
 		names.name="names[]";
-		names.placeholder="Names Here";
+		names.placeholder="Name Here";
 		document.getElementById("elm").appendChild(names).value;
 } 	
 

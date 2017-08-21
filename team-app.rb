@@ -27,6 +27,7 @@ end
 ####################################################
 get '/nput' do
 	erb :inputs
+
 end
 post '/nput' do
   names = params[:names]
@@ -34,7 +35,6 @@ post '/nput' do
 	pears = tea_maker(names)
  	session[:c] = smoosh(pears)
   session[:v] = strangy(session[:c])
- #  puts "session v is #{session[:v]}"
   redirect '/chiggy?'
 end	
 ######################################################
@@ -43,7 +43,7 @@ get '/chiggy' do
 end
 
 post '/p_check' do
-	session[:pairs] = params[:pickem]
+	session[:pairs] = params.values#[:pickem]
 	redirect '/zit'
 end
 
